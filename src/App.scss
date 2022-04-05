@@ -1,25 +1,19 @@
-.app{
-    height: 100vh;
-    
-    
-    .sections{
-        width: 100%;
-        height: calc(100vh-70px);
-        background-color: lightsalmon;
-        position: relative;
-        top:70px;
-        scroll-snap-type: y mandatory;
-        scrollbar-width: 22000px;
-        scroll-behavior: smooth;
-        
-        
-        > *{
-            
-            width: 100vw;
-            height: calc(100vh - 70px);
-            scroll-snap-align: start;
-            
-        }
-        
+.app {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  /*.sections::-webkit-scrollbar{display:none;}*/ // for chrome to hide scrollbar
+  .sections {
+    width: 100%;
+    height: 100%;
+    /*-ms-overflow-style:none;*/ //for IE AND EDGE
+    scrollbar-width: none;
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    > * {
+      width: 100vw;
+      height: 100vh;
+      scroll-snap-align: start;
     }
+  }
 }
